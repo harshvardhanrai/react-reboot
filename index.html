@@ -18,13 +18,16 @@
       height: 100%;
     }
 
-    #abcd {
-      position: absolute;
-      transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
-      width: 50px;
-      height: 50px;
-      background-color: red;
-      border-radius: 50%;
+    body {
+      position: relative;
+      overflow: hidden;
+      padding: 30px;
+    }
+
+    #main {
+      width: 100%;
+      height: 100%;
+      background-color: #222;
     }
 
   </style>
@@ -32,7 +35,9 @@
 </head>
 <body id="body">
 
-    <div id="abcd"></div>
+    
+  <input type="text" placeholder="write anything">
+  <h1>Total Characters : <span style="color: blue;"></span> </h1>
   
   <script src="app.js"></script>
 

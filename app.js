@@ -85,12 +85,13 @@
 
 //  TASK-10
 
-let abcd = document.querySelector("#abcd");
+let inp = document.querySelector("input");
+let span =  document.querySelector("span");
 
-window.addEventListener("mousemove", function(dets){
-  abcd.style.top = dets.clientY + "px";
-  abcd.style.left = dets.clientX + "px";
-});
+inp.addEventListener("input", function(){
+  span.textContent = inp.value.length;
+})
+
 
 
 
