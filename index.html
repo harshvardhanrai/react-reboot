@@ -30,10 +30,43 @@
       height: 100%;
     }
 
-    #hide{
-      display: none;
-      color:gold;
-    }
+  button {
+    padding: 7px 12px;
+    background-color: dodgerblue;
+    border-radius: 15px;
+    border: none;
+    font-weight: 400;
+  }
+
+  #loginForm{
+    display:block;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  h2{
+    color: antiquewhite;
+  }
+
+  #forms{
+    width: 200px;
+    height: 200px;
+    border: 10px  white;
+    margin-left: 45%;
+  }
+
+  .form-group{
+    color: aliceblue;
+
+    padding-top: 10px;
+  }
+
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+    display: none;
+  }
 
   </style>
 
@@ -41,37 +74,36 @@
 <body id="body">
 
     
-  <form action="">
+  <div id="forms">
 
-    <input id="name" type="name" placeholder="name">
+    <div>
+      <h2>Email & Password Validator</h2> <br>
 
-    <div id="hide">
+      <form autocomplete="off" id="loginForm">
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+            <input type="text" id="email" placeholder="Enter your email"><br>
+            <small class="error" id="emailError"> </small>
+        </div> <br>
+
+        <div class="form-group">
+          <label for="password">Password :</label>
+          <input type="password" id="password" placeholder="password"><br>
+          <small class="error" id="passwordError"></small>
+        </div>
+        <br>
+        <button type="submit">Validate</button>
+        
+      </form>
       <br>
-      <small>name should be atleast 3 characters long</small>
+
+      <div id="resultMessage">
+        There are errors !
+      </div>
     </div>
 
-    <br><br>
-    <input type="email" placeholder="email">
-    <br><br>
-    <input type="password" placeholder="password">
-    <br><br>
-
-    <select name="gender" id="">
-
-      <option value="male">Male</option>
-      <option value="female">Female</option>
-      <option value="others">Others</option>
-
-    </select>
-
-    <br> <br>
-
-    <textarea name="" id="" placeholder="Tell us about yourself..."></textarea>
-    <br><br>
-
-    <input type="submit">
-
-  </form>
+  </div>
   
   <script src="app.js"></script>
 

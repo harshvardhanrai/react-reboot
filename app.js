@@ -85,20 +85,33 @@
 
 //  TASK-10
 
-let nm = document.querySelector("#name");
+let email = document.querySelector("#email");
+let password =  document.querySelector("#password");
 let form = document.querySelector("form");
-let hd = document.querySelector("#hide");
 
 form.addEventListener("submit", function(dets){
   dets.preventDefault();
 
-  if (nm.value.length < 3){
-    hd.style.display = "initial";
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/;
+
+  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+  let emailans = emailRegex.test(email.value);
+  let passans = passwordRegex.test(password.value);
+
+  if(!emailans){
+    document.querySelector("#emailError").textContent = "Email is incorrect";
+    document.querySelector("#emailError").style.display = "initial";
   }
-  else{
-  hd.style.display = "none";
+
+  if(!passans){
+    document.querySelector("#passwordError").textContent = "Password is incorrect";
+    document.querySelector("#passwordError").style.display = "initial";
   }
+  
+
 })
+
 
 
 
