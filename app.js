@@ -85,19 +85,19 @@
 
 //  TASK-10
 
-let inp = document.querySelector("input");
-let span =  document.querySelector("span");
+let nm = document.querySelector("#name");
+let form = document.querySelector("form");
+let hd = document.querySelector("#hide");
 
-inp.addEventListener("input", function(){
-  let left = 20 - inp.value.length;
-  span.textContent =  left;
+form.addEventListener("submit", function(dets){
+  dets.preventDefault();
 
-  if(left > 0){
-    span.style.color = "lightgreen" ; 
-    }
-  else {
-  span.style.color = "red";
-    }
+  if (nm.value.length < 3){
+    hd.style.display = "initial";
+  }
+  else{
+  hd.style.display = "none";
+  }
 })
 
 

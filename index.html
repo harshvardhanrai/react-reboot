@@ -22,12 +22,17 @@
       position: relative;
       overflow: hidden;
       padding: 30px;
+      background-color: #222;
     }
 
     #main {
       width: 100%;
       height: 100%;
-      background-color: #222;
+    }
+
+    #hide{
+      display: none;
+      color:gold;
     }
 
   </style>
@@ -36,8 +41,37 @@
 <body id="body">
 
     
-  <input type="text" placeholder="write anything">
-  <h1>Total Characters : <span></span> </h1>
+  <form action="">
+
+    <input id="name" type="name" placeholder="name">
+
+    <div id="hide">
+      <br>
+      <small>name should be atleast 3 characters long</small>
+    </div>
+
+    <br><br>
+    <input type="email" placeholder="email">
+    <br><br>
+    <input type="password" placeholder="password">
+    <br><br>
+
+    <select name="gender" id="">
+
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="others">Others</option>
+
+    </select>
+
+    <br> <br>
+
+    <textarea name="" id="" placeholder="Tell us about yourself..."></textarea>
+    <br><br>
+
+    <input type="submit">
+
+  </form>
   
   <script src="app.js"></script>
 
