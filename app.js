@@ -102,38 +102,32 @@
 const users = [
   { name: "amisha rathore", pic: "https://images.unsplash.com/photo-1758183583798-b7038bca9272?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDh8dG93SlpGc2twR2d8fGVufDB8fHx8fA%3D%3D", bio: "silent chaos in aloud world 💯🐕‍🦺 | not for everyone" },
 
-  {
-  name: "isha kapoor",
-  pic: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=1600&auto=format&fit=crop&q=60",
-  bio: "daydream believer 🌙 | chasing sunsets & thoughts"
-},
-
 {
-  name: "rahul singh",
-  pic: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=1600&auto=format&fit=crop&q=60",
+  name: "Rahul Singh",
+  pic: "https://images.unsplash.com/photo-1714737238439-6ab99e0bb1c5?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTY5fHxjb2xvcmZ1bCUyMHBvcnRyYWl0JTIwcGhvdG9ncmFwaHl8ZW58MHx8MHx8fDI%3D",
   bio: "quiet storms brew in loud hearts ⚡ | not everyone’s cup of tea"
 },
 
 {
-  name: "naina verma",
-  pic: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=1600&auto=format&fit=crop&q=60",
+  name: "Naina Verma",
+  pic: "https://images.unsplash.com/photo-1658786403875-ef4086b78196?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIzfHxjb2xvcmZ1bCUyMHBvcnRyYWl0JTIwcGhvdG9ncmFwaHl8ZW58MHx8MHx8fDI%3D",
   bio: "soft edges, sharp mind 🌿 | whisper when needed"
 },
 
 {
-  name: "arjun malhotra",
+  name: "Jane",
   pic: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1600&auto=format&fit=crop&q=60",
   bio: "steady heartbeat in chaos 🔥 | misunderstood often"
 },
 
 {
-  name: "meera aiyer",
+  name: "Patrick Williams",
   pic: "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=1600&auto=format&fit=crop&q=60",
   bio: "laughs in vowels, lives in consonants 🎶 | doesn’t always speak"
 },
 
 {
-  name: "harsh vardhan",
+  name: "Gwen Stacy",
   pic: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=1600&auto=format&fit=crop&q=60",
   bio: "midnight thinker 🌌 | voices in silence"
 },
@@ -162,7 +156,7 @@ card.appendChild(img);
 // Create and append the blurred layer
 const blurredLayer = document.createElement('div');
 blurredLayer.className = 'blurred-layer';
-blurredLayer.style.backgroundColor = user.pic
+blurredLayer.style.backgroundImage = `url(${user.pic})`;
 card.appendChild(blurredLayer);
 
 // Create content container
@@ -183,7 +177,7 @@ content.appendChild(paragraph);
 card.appendChild(content);
 
 // Finally, append the whole card to the body or a specific container
-document.body.appendChild(card);  // or replace with document.querySelector('.some-container').appendChild(card);
+document.querySelector(".cards").appendChild(card);  // or replace with document.querySelector('.some-container').appendChild(card);
 
 
   })

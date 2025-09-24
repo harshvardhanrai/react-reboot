@@ -8,12 +8,21 @@ body {
 }
 
 input{
-  background-color:rgba(33, 32, 32, 0.591);
+  background-color: #111;
+  color: #888;
   width: 185px;
+  margin-left: 43%;
+  outline: none;
   padding: 5px 5px;
   border-radius: 10px;
   margin-bottom: 10px;
-  border-color: blue;
+  border-color:darkorange;
+}
+
+.cards{
+  display: flex;
+  gap: 10;
+  align-items: center;
 }
 
 .card{
