@@ -177,8 +177,7 @@ content.appendChild(paragraph);
 card.appendChild(content);
 
 // Finally, append the whole card to the body or a specific container
-document.querySelector(".cards").appendChild(card);  // or replace with document.querySelector('.some-container').appendChild(card);
-
+document.querySelector(".cards").appendChild(card);
 
   })
 }
